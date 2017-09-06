@@ -15,21 +15,24 @@
 
 	class Contact
 	{
-		char	first_name[64];
-		char	last_name[64];
-		char	nickname[64];
-		char	login[64];
-		char	postal_address[64];
-		char	email_address[64];
-		char	phone_number[64];
-		char	birthday_date[64];
-		char	favorite_meal[64];
-		char	underwear_color[64];
-		char	darkest_secret[64];
+		std::string	_first_name;
+		std::string	_last_name;
+		std::string	_nickname;
+		std::string	_login;
+		std::string	_postal_address;
+		std::string	_email_address;
+		std::string	_phone_number;
+		std::string	_birthday_date;
+		std::string	_favorite_meal;
+		std::string	_underwear_color;
+		std::string	_darkest_secret;
 		
 	public:
 		Contact( void );
 		~Contact( void );
+
+		void	set_data( void );
+		void	print_info( void );
 
 	};
 

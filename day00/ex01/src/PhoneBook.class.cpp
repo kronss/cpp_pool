@@ -26,3 +26,28 @@ PhoneBook::~PhoneBook( void ) {
 int	PhoneBook::get_nbr( void ) {
 	return (_n);
 }
+
+void PhoneBook::addContact( void ) {
+
+	contacts[this->_n].set_data();
+
+	(this->_n) += 1;
+}
+
+void PhoneBook::showContact( void ) {
+
+	
+	std::cout << std::right << std::setw(10) << "index" << "|";
+	std::cout << std::right << std::setw(10) << "first name" << "|";
+	std::cout << std::right << std::setw(10) << "last name" << "|";
+	std::cout << std::right << std::setw(10) << "nickname" << "|" << std::endl;
+
+	for (register int i = 0; i <= this->_n; ++i)
+	{
+		// std::cout << 
+
+		/* code */
+	}
+
+}
+

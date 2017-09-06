@@ -22,7 +22,10 @@
 	public:
 		PhoneBook( void );
 		~PhoneBook( void );
-		int 	get_nbr( void );
+
+		int		get_nbr( void );
+		void	addContact( void );
+		void	showContact( void );
 	};
 
 #endif

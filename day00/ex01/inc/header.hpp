@@ -15,6 +15,8 @@
 
 
 # include <iostream>
+# include <iomanip>
+# include <string>
 
 # include "Contact.class.hpp"
 # include "PhoneBook.class.hpp"

@@ -21,7 +21,7 @@ SHELL = /bin/sh
 NAME = book
 
 #********* -INC
-INC_NAME =	header.hpp
+INC_NAME =	header.hpp Contact.class.hpp PhoneBook.class.hpp
 INC_DIR =	inc
 INC = $(addprefix $(INC_DIR)/, $(INC_NAME))
 
