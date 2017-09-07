@@ -12,31 +12,12 @@
 
 #include "header.hpp"
 
-Contact::Contact( void )
-// :	first_name(), last_name(), nickname(), login(), postal_address(), email_address(),
-// 	phone_number(), birthday_date(), favorite_meal(), underwear_color(), darkest_secret()
-{
-	// std::memset(_first_name, 0, sizeof(_first_name));
-	// std::memset(_last_name, 0 , sizeof(_last_name));
-	// std::memset(_nickname, 0 , sizeof(_nickname));
-	// std::memset(_login, 0 , sizeof(_login));
-	// std::memset(_postal_address, 0 , sizeof(_postal_address));
-	// std::memset(_email_address, 0 , sizeof(_email_address));
-	// std::memset(_phone_number, 0 , sizeof(_phone_number));
-	// std::memset(_birthday_date, 0 , sizeof(_birthday_date));
-	// std::memset(_favorite_meal, 0 , sizeof(_favorite_meal));
-	// std::memset(_underwear_color, 0 , sizeof(_underwear_color));
-	// std::memset(_darkest_secret, 0 , sizeof(_darkest_secret));
-
-	// std::cout << "Constructor called" << std::endl;
+Contact::Contact( void ) {
 	return ;
 }
 
 Contact::~Contact( void ) {
-
-	// std::cout << "Destructor called" << std::endl;
 	return ;
-
 }
 
 void	Contact::set_data( void ) {
@@ -69,7 +50,7 @@ void	Contact::set_data( void ) {
 std::string truncate(std::string str, size_t width)
 {
     if (str.length() > width)
-		return str.substr(0, width) + ".";
+		return str.substr(0, width - 1) + ".";
     return str;
 }
 
