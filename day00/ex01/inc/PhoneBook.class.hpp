@@ -26,6 +26,7 @@
 		int		get_nbr( void );
 		void	addContact( void );
 		void	showContact( void );
+		void	menageContact( void );
 	};
 
 #endif

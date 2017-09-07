@@ -28,13 +28,13 @@ Contact::Contact( void )
 	// std::memset(_underwear_color, 0 , sizeof(_underwear_color));
 	// std::memset(_darkest_secret, 0 , sizeof(_darkest_secret));
 
-	std::cout << "Constructor called" << std::endl;
+	// std::cout << "Constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact( void ) {
 
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 	return ;
 
 }
@@ -66,18 +66,34 @@ void	Contact::set_data( void ) {
 
 }
 
+std::string truncate(std::string str, size_t width)
+{
+    if (str.length() > width)
+		return str.substr(0, width) + ".";
+    return str;
+}
 
-void	Contact::print_info(void) {
+void	Contact::printInfo( int i ) {
 
-	std::cout << _first_name << std::endl;
-	std::cout << _last_name << std::endl;
-	std::cout << _nickname << std::endl;
-	std::cout << _login << std::endl;
-	std::cout << _postal_address << std::endl;
-	std::cout << _email_address << std::endl;
-	std::cout << _phone_number << std::endl;
-	std::cout << _birthday_date << std::endl;
-	std::cout << _favorite_meal << std::endl;
-	std::cout << _underwear_color << std::endl;
-	std::cout << _darkest_secret << std::endl;
+	std::cout << std::right << std::setw(10) << i << "|";
+	std::cout << std::right << std::setw(10) << truncate(this->_first_name, 10) << "|";
+	std::cout << std::right << std::setw(10) << truncate(this->_last_name, 10) << "|";
+	std::cout << std::right << std::setw(10) << truncate(this->_nickname, 10) << "|" << std::endl;
+
+}
+
+void	Contact::printFullInfo( void ) {
+
+	std::cout << CYAN << std::right << std::setw(20) << "first name: " << DEFT << _first_name << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "last name: " << DEFT << _last_name << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "nickname: " << DEFT << _nickname << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "login: " << DEFT << _login << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "postal address: " << DEFT << _postal_address << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "email address: " << DEFT << _email_address << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "phone number: " << DEFT << _phone_number << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "birthday date: " << DEFT << _birthday_date << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "avorite meal: " << DEFT << _favorite_meal << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "underwear color: " << DEFT << _underwear_color << std::endl;
+	std::cout << CYAN << std::right << std::setw(20) << "darkest secret: " << DEFT << _darkest_secret << std::endl;
+
 }

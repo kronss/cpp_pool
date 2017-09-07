@@ -32,7 +32,8 @@
 		~Contact( void );
 
 		void	set_data( void );
-		void	print_info( void );
+		void	printInfo( int i );
+		void	printFullInfo( void );
 
 	};
 

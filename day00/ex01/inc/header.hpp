@@ -13,12 +13,15 @@
 #ifndef HEADER_HPP
 # define HEADER_HPP 
 
-
 # include <iostream>
 # include <iomanip>
 # include <string>
 
 # include "Contact.class.hpp"
 # include "PhoneBook.class.hpp"
+
+# define CYAN "\e[96m"
+# define DEFT "\e[39m"
+# define ERRO "\e[31m"
 
 #endif

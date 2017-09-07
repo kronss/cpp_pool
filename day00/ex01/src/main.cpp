@@ -12,51 +12,30 @@
 
 #include "header.hpp"
 
-// void		to_lower(char *str)
-// {
-// 	register char *tmp = str;
-
-// 	while (*tmp != '\0')
-// 	{
-// 		if ('A' <= *tmp && *tmp <= 'Z')
-// 			*tmp += 32;
-// 		++tmp;
-// 	}
-// }
-
 int			main(void)
 {
 	PhoneBook	book;
-	Contact		cont;
 	std::string	buf;
 
-	
-	std::cout << "please write 'ADD' or 'SEARCH' or 'EXIT'" << std::endl;
-	std::cout << "'ADD' to add contact" << std::endl;
-	std::cout << "'SEARCH' to search contact" << std::endl;
-	std::cout << "'EXIT' to exit from program" << std::endl;
+	std::cout << "please write '" << CYAN << "ADD" << DEFT << "' or '" << CYAN << "SEARCH" << DEFT << "' or '" << CYAN << "'EXIT'" << DEFT << std::endl;
+	std::cout << CYAN << "ADD" << DEFT << " to add contact" << std::endl;
+	std::cout << CYAN << "SEARCH" << DEFT " to search contact" << std::endl;
+	std::cout << CYAN << "EXIT" << DEFT " to exit from program" << std::endl;
 
 	while (1)
 	{
-		std::cout << "Contacts in PhoneBook == " << book.get_nbr() << std::endl;
+		std::cout << CYAN << book.get_nbr() << DEFT << " contacts in PhoneBook" << std::endl;
 		std::cin >> buf;
-		// to_lower(buf);
 
 		if (buf == "ADD")
 			book.addContact();
-		
 		else if (buf == "SEARCH")
+		{
 			book.showContact();
-		
+			book.menageContact();
+		}
 		else if (buf == "EXIT")
 			break ;
-		
-		else
-			std::cout << buf << std::endl;
 	}
-
-
-	std::cout << "sizeof == " << sizeof(cont) << std::endl;
-	// std::cout << cont.first_name << std::endl;
 	return 0;
 }

@@ -47,7 +47,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(INC)
 	$(CC) $(CFLAGS) -I./inc/ $(OBJ) -o $(NAME)
-	
+	@echo "\033[33m'$(NAME)' compiling done.\033[0m"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 	$(CC) -I./inc/ -c $(CFLAGS) $? -o $@
@@ -73,7 +73,7 @@ lite_clean:
 rew: lite_clean $(NAME);
 	
 r:	$(NAME)
-	./$(NAME)
+	./$(NAME) < test.txt
 
 bug:
 	$(CC) $(CFLAGS)  -I./inc/ $(SRC) -g -o bug
