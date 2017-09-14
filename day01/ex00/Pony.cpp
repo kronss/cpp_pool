@@ -10,7 +10,7 @@
 //                                                                            //
 // ************************************************************************** //
 
-#include "header.hpp"
+#include "Pony.hpp"
 
 Pony::Pony(const char *name) : _name(name)
 {

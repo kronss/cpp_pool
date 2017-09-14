@@ -1,22 +1,20 @@
 // ************************************************************************** //
 //                                                                            //
 //                                                        :::      ::::::::   //
-//   header.hpp                                         :+:      :+:    :+:   //
+//   ex01.cpp                                           :+:      :+:    :+:   //
 //                                                    +:+ +:+         +:+     //
 //   By: ochayche <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
-//   Created: 2017/09/05 14:48:52 by ochayche          #+#    #+#             //
-//   Updated: 2017/09/05 14:48:53 by ochayche         ###   ########.fr       //
+//   Created: 2017/09/14 17:11:47 by ochayche          #+#    #+#             //
+//   Updated: 2017/09/14 17:12:04 by ochayche         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
-#ifndef HEADER_HPP
-# define HEADER_HPP 
+void memoryLeak()
+{
+	std::string*	panthere = new std::string("String panthere");
 
-# include <iostream>
-# include <iomanip>
-# include <string>
+	std::cout << *panthere << std::endl;
 
-# include "Pony.class.hpp"
-
-#endif
+	delete panthere;
+}

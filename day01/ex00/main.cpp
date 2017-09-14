@@ -10,7 +10,7 @@
 //                                                                            //
 // ************************************************************************** //
 
-#include "header.hpp"
+#include "Pony.hpp"
 
 Pony		ponyOnTheStack(const char *str)
 {

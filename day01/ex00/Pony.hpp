@@ -1,6 +1,11 @@
 #ifndef PONY_CLASS_HPP
 # define PONY_CLASS_HPP 
 
+
+# include <iostream>
+# include <string>
+
+
 	class Pony
 	{
 		std::string	_name;
