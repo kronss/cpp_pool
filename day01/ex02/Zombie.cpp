@@ -10,6 +10,8 @@
 //                                                                            //
 // ************************************************************************** //
 
+#include "Zombie.hpp"
+
 Zombie::Zombie(std::string name, std::string type) : _name(name) , _type(type)
 {
 	std::cout << "Zombie born" <<std::endl;
@@ -17,7 +19,7 @@ Zombie::Zombie(std::string name, std::string type) : _name(name) , _type(type)
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie died" <<std::endl;	
+	std::cout << "Zombie died" <<std::endl;
 }
 
 void	Zombie::announce()
