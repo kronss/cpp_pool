@@ -14,12 +14,12 @@
 
 ZombieEvent::ZombieEvent()
 {
-
+	std::cout << "event constructor called" << std::endl;
 }
 
 ZombieEvent::~ZombieEvent()
 {
-	
+	std::cout << "event destructor called" << std::endl;
 }
 
 void	ZombieEvent::setZombieType(std::string type)
@@ -35,15 +35,15 @@ Zombie*	ZombieEvent::newZombie(std::string name)
 
 void ZombieEvent::randomChump()
 {
-	const char *pool[] =
-	{"abc_1", "abc_2", "abc_3", "abc_4", "abc_5", "abc_6","abc_7"};
-	int nbr;
+	const char *pool[] = {"Jimm", "Bill", "Willy", "Poly", "Sasha"};
 
-	srand(time(NULL));
+	int random;
+	std::srand(time(NULL));
+	random = std::rand() % 3;
 
-	nbr = rand() % 7;
+	setZombieType("Zombie");
+	Zombie *nZombie = newZombie(pool[random]);
+	nZombie->announce();
 
-
-
-
+	delete nZombie;
 }

@@ -17,6 +17,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <ctime>
 #include "Zombie.hpp"
 
 	class ZombieEvent
