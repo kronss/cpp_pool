@@ -33,7 +33,17 @@ Zombie*	ZombieEvent::newZombie(std::string name)
 	return (newZombie);
 }
 
-// std::string ZombieEvent::randomChump()
-// {
-	
-// }
+void ZombieEvent::randomChump()
+{
+	const char *pool[] =
+	{"abc_1", "abc_2", "abc_3", "abc_4", "abc_5", "abc_6","abc_7"};
+	int nbr;
+
+	srand(time(NULL));
+
+	nbr = rand() % 7;
+
+
+
+
+}

@@ -16,6 +16,7 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "Zombie.hpp"
 
 	class ZombieEvent
@@ -30,6 +31,7 @@
 		Zombie*	newZombie(std::string name);
 
 
+		void randomChump();
 
 	};
 
