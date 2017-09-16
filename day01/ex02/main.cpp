@@ -14,16 +14,8 @@
 
 int main(int argc, char const *argv[])
 {
-
-	ZombieEvent zomb_event;// = new ZombieEvent();
+	ZombieEvent zomb_event;
 
 	zomb_event.randomChump();
-
-	// zomb_event->setZombieType("warior");
-	// Zombie *zomb2 = zomb_event->newZombie("garosh");
-
-	// delete zomb2;
-
-
 	return 0;
 }

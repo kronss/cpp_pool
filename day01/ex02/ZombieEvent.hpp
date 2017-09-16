@@ -13,7 +13,6 @@
 #ifndef ZOMBIEEVENT_HPP
 # define ZOMBIEEVENT_HPP
 
-
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -23,17 +22,14 @@
 	class ZombieEvent
 	{
 		std::string _type;
+
 	public:
 		ZombieEvent();
 		~ZombieEvent();
 
-
 		void	setZombieType(std::string type);
 		Zombie*	newZombie(std::string name);
-
-
-		void randomChump();
-
+		void 	randomChump();
 	};
 
 #endif
