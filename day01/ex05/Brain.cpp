@@ -12,8 +12,11 @@
 
 #include "Brain.hpp"
 
-Brain::Brain() : _adr("0x123456789ABCDEF")
+Brain::Brain()
 {
+	std::ostringstream	convert;
+	convert << this;
+	this->_adr = convert.str();
 	std::cout << "Brain created" << std::endl;
 }
 
@@ -24,5 +27,5 @@ Brain::~Brain()
 
 std::string Brain::identify() const
 {
-	return (this->_adr);
+	return this->_adr;
 }

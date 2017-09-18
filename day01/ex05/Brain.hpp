@@ -14,10 +14,12 @@
 # define BRAIN_HPP 
 
 # include <iostream>
+# include <sstream>
 
 class Brain
 {
-	std::string _adr;
+	std::string	_adr;
+
 public:
 	Brain();
 	~Brain();

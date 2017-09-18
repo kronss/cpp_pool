@@ -23,11 +23,8 @@ public:
 	Human();
 	~Human();
 	
-	std::string	identify();
-	Brain		getBrain();
+	std::string		identify();
+	const Brain		&getBrain();
 };
-
-
-
 
 #endif
