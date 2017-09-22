@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/Human.cpp
+Human.hpp
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/Human.hpp
+
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/Human.hpp
+string
+-
+iostream
+-
+
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/main.cpp
+Human.hpp
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/Human.hpp
+
