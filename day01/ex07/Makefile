@@ -18,7 +18,7 @@ OBJ_DIR =	.obj
 OBJ = $(subst .cpp,.o,$(subst $(SRC_DIR)/,$(OBJ_DIR)/,$(SRC)))
 
 #********* -SRC
-SRC_DIR =	.
+SRC_DIR =	src
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_NAME))
 SRC_NAME =	main.cpp
 # add .c file ---->
@@ -27,7 +27,7 @@ SRC_NAME =	main.cpp
 #	RULES
 ################################################################################
 
-.PHONY: all clean fclean re t
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
@@ -59,7 +59,7 @@ lite_clean:
 rew: lite_clean $(NAME);
 	
 r:	$(NAME)
-	./$(NAME) Makefile qq qq
+	./$(NAME) Makefile NAME DICK
 
 bug:
 	$(CC) $(CFLAGS)  -I./inc/ $(SRC) -g -o bug

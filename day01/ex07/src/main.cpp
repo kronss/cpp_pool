@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 
+
 int usage(char *file)
 {
 	std::cout << "usage: " << file << ", \"string 1\" , \"string 2\"" << std::endl;
