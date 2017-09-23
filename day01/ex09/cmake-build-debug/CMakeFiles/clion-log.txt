@@ -1,0 +1,4 @@
+/home/kron/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day01/ex09
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day01/ex09/cmake-build-debug

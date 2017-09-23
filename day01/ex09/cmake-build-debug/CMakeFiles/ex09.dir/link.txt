@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ex09.dir/main.cpp.o CMakeFiles/ex09.dir/Logger.cpp.o  -o ex09 
