@@ -1,11 +1,13 @@
 #include "Human.hpp"
 
+ptrAr Human::ptr[3] = {&Human::meleeAttack, &Human::rangedAttack, &Human::intimidatingShout};
+
 Human::Human()
 {
-    ptr = {meleeAttack, rangedAttack, intimidatingShout};
+
 }
 
-Human::~Human(void)
+Human::~Human()
 {
 
 }
@@ -25,10 +27,6 @@ void Human::intimidatingShout(std::string const & target)
     std::cout << "Human intimidating shout => " << target << std::endl;
 }
 
-
-
-
-
 void Human::action(std::string const & action_name, std::string const & target)
 {
     std::string actionsStr[] = {"meleeAttack", "rangedAttack", "intimidatingShout"};
@@ -36,9 +34,8 @@ void Human::action(std::string const & action_name, std::string const & target)
     for (int i = 0; i < 3; ++i) {
         if (action_name == actionsStr[i])
         {
-            this->ptr[i](target);
+            (this->*Human::ptr[i])(target);
             return;
         }
     }
-
 }

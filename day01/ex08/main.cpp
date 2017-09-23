@@ -2,11 +2,10 @@
 
 int main()
 {
-    Human hum;
-    hum.action("meleeAttack", "Rainbow Dash");
-    hum.action("rangedAttack", "Rainbow Dash");
-    hum.action("intimidatingShout", "Rainbow Dash");
-    hum.action("DanceThePolka", "Rainbow Dash");
+    Human person;
+    person.action("meleeAttack", "person");
+    person.action("rangedAttack", "person");
+    person.action("intimidatingShout", "person");
+    person.action("DanceThePolka", "person");
     return (0);
 }
-

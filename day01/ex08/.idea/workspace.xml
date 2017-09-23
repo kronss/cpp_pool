@@ -20,7 +20,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="ex08" />
   </component>
@@ -38,21 +37,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Human.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Human.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Human.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+                <state relative-caret-position="357">
+                  <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -62,9 +61,9 @@
             <entry file="file://$PROJECT_DIR$/Human.hpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="15" />
+                  <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="15" />
                   <folding>
-                    <element signature="e#38#55#0" expanded="true" />
+                    <element signature="e#38#56#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -73,14 +72,14 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Human.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Human.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding>
-                    <element signature="e#38#55#0" expanded="true" />
+                    <element signature="e#38#56#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -106,10 +105,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
-    <option name="y" value="27" />
-    <option name="width" value="2438" />
-    <option name="height" value="1199" />
+    <option name="y" value="30" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -126,20 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ex08" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ex08" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -158,6 +143,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ex08">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
       <method />
     </configuration>
@@ -235,20 +235,6 @@
       <JdkChoice value="FROM_MODULE" />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -322,13 +308,8 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="ex08" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex08" TARGET_NAME="ex08" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ex08" RUN_TARGET_NAME="ex08">
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ex08" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex08" TARGET_NAME="ex08" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ex08" RUN_TARGET_NAME="ex08">
-      <envs />
-      <method />
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
@@ -350,11 +331,13 @@
       <updated>1506090451333</updated>
       <workItem from="1506090453009" duration="1113000" />
       <workItem from="1506091614834" duration="5145000" />
+      <workItem from="1506151945344" duration="1438000" />
+      <workItem from="1506194032784" duration="1658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6258000" />
+    <option name="totallyTimeSpent" value="9354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,22 +349,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="27" width="2438" height="1199" extended-state="0" />
+    <frame x="0" y="30" width="1366" height="738" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17445743" sideWeight="0.49624062" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11590909" sideWeight="0.49624062" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971996" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971996" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971996" sideWeight="0.37186977" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971996" sideWeight="0.6281302" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39927733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5037594" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39927733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32971996" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -391,7 +374,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -401,6 +384,74 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Human.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Human.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="15" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Human.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Human.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="15" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -422,7 +473,7 @@
         <state relative-caret-position="225">
           <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
-            <element signature="e#38#55#0" expanded="true" />
+            <element signature="e#38#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -435,22 +486,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="193" column="64" lean-forward="false" selection-start-line="193" selection-start-column="64" selection-end-line="193" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/tclDecls.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12405">
-          <caret line="836" column="21" lean-forward="false" selection-start-line="836" selection-start-column="21" selection-end-line="836" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iosfwd" />
+    <entry file="file:///usr/include/tclDecls.h" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -459,28 +496,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Human.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="15" />
+          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="15" />
           <folding>
-            <element signature="e#38#55#0" expanded="true" />
+            <element signature="e#38#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Human.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        <state relative-caret-position="357">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/Human.cpp" "/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/cmake-build-debug/CMakeFiles/ex08.dir/Human.cpp.o"
-  "/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/main.cpp" "/nfs/2016/o/ochayche/UNIT/cpp_pool/day01/ex08/cmake-build-debug/CMakeFiles/ex08.dir/main.cpp.o"
+  "/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day01/ex08/Human.cpp" "/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day01/ex08/cmake-build-debug/CMakeFiles/ex08.dir/Human.cpp.o"
+  "/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day01/ex08/main.cpp" "/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day01/ex08/cmake-build-debug/CMakeFiles/ex08.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
