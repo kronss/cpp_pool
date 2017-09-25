@@ -53,8 +53,6 @@ int		Fixed::toInt() const
 }
 
 
-
-
 int Fixed::getRawBits(void) const
 {
 //	std::cout << "getRawBits member function called" << std::endl;
@@ -64,4 +62,9 @@ int Fixed::getRawBits(void) const
 void Fixed::setRawBits(int const raw)
 {
 	this->_fpv = raw;
+}
+
+std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
+{
+
 }

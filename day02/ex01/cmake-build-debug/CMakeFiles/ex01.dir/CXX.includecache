@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day02/ex01/Fixed.class.cpp
+Fixed.class.hpp
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day02/ex01/Fixed.class.hpp
+
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day02/ex01/Fixed.class.hpp
+iostream
+-
+cmath
+-
+
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day02/ex01/main.cpp
+Fixed.class.hpp
+/nfs/2016/o/ochayche/UNIT/cpp_pool/day02/ex01/Fixed.class.hpp
+
