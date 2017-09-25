@@ -1,0 +1,3 @@
+/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day02/ex02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day02/ex02/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/kron/783C75B83C7571CC/UNIT/piscine/CPP/day02/ex02/cmake-build-debug/CMakeFiles/ex02.dir
