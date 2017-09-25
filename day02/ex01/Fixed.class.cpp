@@ -18,16 +18,16 @@ Fixed::Fixed(int a)
 
 Fixed::Fixed(float a)
 {
-
 	setRawBits((int)roundf(a * (1 << _nfb)));
 	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &obj) // copy constructor
 {
-	this->setRawBits(obj.getRawBits());
-//	this->_fpv = obj.getRawBits();
-	std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
+    *this = obj;
+//	setRawBits(obj.getRawBits());
+//	std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed::~Fixed(void)
@@ -37,8 +37,9 @@ Fixed::~Fixed(void)
 
 Fixed& Fixed::operator=(Fixed const &rhs)
 {
-	std::cout << "Assignation operator called" << std::endl;
-	this->setRawBits(rhs.getRawBits());
+    std::cout << "Assignation operator called" << std::endl;
+//	this->setRawBits(rhs.getRawBits());
+    this->_fpv = rhs.getRawBits();
 	return *this;
 }
 
@@ -55,16 +56,16 @@ int		Fixed::toInt() const
 
 int Fixed::getRawBits(void) const
 {
-//	std::cout << "getRawBits member function called" << std::endl;
-	return this->_fpv;
+	return _fpv;
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	this->_fpv = raw;
+    _fpv = raw;
 }
 
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 {
-
+    o << rhs.toFloat();
+    return o;
 }

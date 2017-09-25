@@ -32,5 +32,6 @@ public:
 	void setRawBits(int const raw);
 };
 
+std::ostream &operator<<(std::ostream &o, Fixed const &rhs);
 
 #endif //FIXED_CLASS_HPP
