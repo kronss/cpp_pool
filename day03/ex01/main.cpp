@@ -15,6 +15,8 @@ int		main()
 	c.rangedAttack("student");
 	b.takeDamage(33);
 	c.takeDamage(103);
+	c.takeDamage(4);
+	c.takeDamage(90);
 
 	return (0);
 }

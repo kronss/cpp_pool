@@ -9,6 +9,10 @@
 #include <string>
 #include <sstream>
 
+#define FATALITY "\e[31m"
+#define RESET "\e[39m"
+
+
 class FragTrap
 {
 private:
@@ -32,15 +36,46 @@ public:
 	FragTrap &operator = (const FragTrap & obj);
 
 
+
+
+
+
+	void kick(std::string const & target);
+	void punch(std::string const & target);
+	void foreheadAttack(std::string const & target);
+	void brutality(std::string const & target);
+	void annihilation(std::string const & target);
+
+
+
+
+
+
+
+
 //
 
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
-//	beRepaired(unsigned int amount);
+	void beRepaired(unsigned int amount);
 //
 
-//	vaulthunter_dot_exe(std::string const & target);
+	void vaulthunter_dot_exe(std::string const & target);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 };
 
