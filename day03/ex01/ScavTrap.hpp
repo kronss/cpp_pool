@@ -33,12 +33,32 @@ class ScavTrap
 	int			_armorDamageReduction;
 
 public:
-
 	ScavTrap();
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const & obj);
+	
 	ScavTrap& operator = (ScavTrap const & obj);
+	
 	~ScavTrap();
+
+
+	void rangedAttack(std::string const & target);
+	void meleeAttack(std::string const & target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+
+
+///////////////////////
+	void challengeNewcomer(std::string const & target);
+/*************/
+	void kick(std::string const & target);
+	void punch(std::string const & target);
+	void foreheadAttack(std::string const & target);
+	void brutality(std::string const & target);
+	void annihilation(std::string const & target);
+///////////////////////
+
+
 };
 
 #endif
