@@ -21,4 +21,4 @@ public:
 };
 
 typedef void (Human::*ptrAr)(std::string const &);
-#endif //HUMAN_HPP
+#endif
