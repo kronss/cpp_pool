@@ -13,54 +13,35 @@
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <cstdlib>
+
+# include "ClapTrap.hpp"
+# include <iostream>
+# include <string>
+# include <sstream>
+# include <cstdlib>
 
 
-#define FATALITY "\e[31m"
-#define RESET "\e[39m"
+# define FATALITY "\e[31m"
+# define RESET "\e[39m"
 
-class ScavTrap
+class ScavTrap : public ClapTrap
 {
-	int			_hitPoints;
-	int			_maxHitPoints;
-	int			_energyPoints;
-	int			_maxEnergyPoints;
-	int			_level;
-	std::string	_name;
-	int			_meleeAttackDamage;
-	int			_rangedAttackDamage;
-	int			_armorDamageReduction;
-
 public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap const & obj);
+	ScavTrap(std::string const & name);
+	ScavTrap(ScavTrap const & copy);
 	
 	ScavTrap& operator = (ScavTrap const & obj);
 	
 	~ScavTrap();
 
 
-	void rangedAttack(std::string const & target);
-	void meleeAttack(std::string const & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-
-
-///////////////////////
 	void challengeNewcomer(std::string const & target);
-/*************/
+/******** challengeNewcomer function *****/
 	void kick(std::string const & target);
 	void punch(std::string const & target);
 	void foreheadAttack(std::string const & target);
 	void brutality(std::string const & target);
 	void annihilation(std::string const & target);
-///////////////////////
-
-
 };
 
 #endif

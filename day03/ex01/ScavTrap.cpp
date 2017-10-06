@@ -89,15 +89,15 @@ void	ScavTrap::takeDamage(unsigned int amount)
 		std::cout << "BEEP!" << std::endl;
 		return;
 	}
-	if (amount <= _armorDamageReduction)
+	int damage = amount - _armorDamageReduction;
+	if ( damage < 0 )
 	{
 		std::cout << "<" << _name << "> shield blocked damage <"
 				  << amount << "> " << std::endl;
 		return;
 	}
-	amount -= _armorDamageReduction;
-
-	if (amount > _hitPoints)
+	
+	if (damage > _hitPoints)
 		std::cout << FATALITY << "FATALITY" << RESET << " - ";
 
 	_hitPoints -= amount;
@@ -145,27 +145,25 @@ void	ScavTrap::challengeNewcomer(std::string const & target) {
 	}
 }
 
-
-
 void	ScavTrap::kick(std::string const &target)
 {
-	std::cout << "by the kick" << std::endl;
+	std::cout << "by the kick. " << target << "kick off" << std::endl;
 }
 
 void	ScavTrap::punch(std::string const &target)
 {
-	std::cout << "by the punch" << std::endl;
+	std::cout << "by the punch. " << target << "kick off"  << std::endl;
 }
 void	ScavTrap::foreheadAttack(std::string const &target)
 {
-	std::cout << "by the foreheadAttack" << std::endl;
+	std::cout << "by the foreheadAttack. " << target << "kick off"  << std::endl;
 }
 
 void	ScavTrap::brutality(std::string const &target)
 {
-	std::cout << "by the brutality" << std::endl;
+	std::cout << "by the brutality. " << target << "kick off"  << std::endl;
 }
 void	ScavTrap::annihilation(std::string const &target)
 {
-	std::cout << "by the annihilation" << std::endl;
+	std::cout << "by the annihilation. " << target << "kick off"  << std::endl;
 }

@@ -73,15 +73,15 @@ void	FragTrap::takeDamage(unsigned int amount)
 		std::cout << "BEEP!" << std::endl;
 		return;
 	}
-	if (amount <= _armorDamageReduction)
+	int damage = amount - _armorDamageReduction;
+	if (damage < 0)
 	{
 		std::cout << "<" << _name << "> shield blocked damage <"
 				  << amount << "> " << std::endl;
 		return;
 	}
-	amount -= _armorDamageReduction;
 
-	if (amount > _hitPoints)
+	if (damage > _hitPoints)
 		std::cout << FATALITY << "FATALITY" << RESET << " - ";
 
 	_hitPoints -= amount;
@@ -113,29 +113,30 @@ void	FragTrap::beRepaired(unsigned int amount)
 
 void	FragTrap::kick(std::string const &target)
 {
-	std::cout << "by the kick" << std::endl;
+	std::cout <<"by the kick. "  << target << " is crying" << std::endl;
 }
 
 void	FragTrap::punch(std::string const &target)
 {
-	std::cout << "by the punch" << std::endl;
+	std::cout << "by the punch. " << target << " is crying" << std::endl;
 }
 void	FragTrap::foreheadAttack(std::string const &target)
 {
-	std::cout << "by the foreheadAttack" << std::endl;
+	std::cout << "by the foreheadAttack. " << target << " is crying" << std::endl;
 }
 
 void	FragTrap::brutality(std::string const &target)
 {
-	std::cout << "by the brutality" << std::endl;
+	std::cout << "by the brutality. " << target << " is crying" << std::endl;
 }
 void	FragTrap::annihilation(std::string const &target)
 {
-	std::cout << "by the annihilation" << std::endl;
+	std::cout << "by the annihilation. " << target << "is crying" << std::endl;
 }
 
 
-void	FragTrap::vaulthunter_dot_exe(std::string const & target) {
+void	FragTrap::vaulthunter_dot_exe(std::string const & target)
+{
 	if (_energyPoints < 25) {
 		std::cout << "FR4G-TP <" << _name << "> not enough energy for attack <"
 				  << target << ">" << std::endl;

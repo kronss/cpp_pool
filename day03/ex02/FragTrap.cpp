@@ -1,40 +1,42 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) :
-		_hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100),
-		_level(1), _name(name), _meleeAttackDamage(30), _rangedAttackDamage(20),
-		_armorDamageReduction(5)
+FragTrap::FragTrap(std::string const & name) : ClapTrap(100, 100, name, 30, 20, 5)
 {
-	std::cout << "CTOR called " << std::endl;
+	std::cout << "FragTrap() CTOR called " << std::endl;
 }
 
-FragTrap::FragTrap() :
-		_hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100),
-		_level(1), _meleeAttackDamage(30), _rangedAttackDamage(20),
-		_armorDamageReduction(5)
-{
-	static int i;
-	std::stringstream ss;
-	ss << "ROBOT #" << i;
-	_name = ss.str();
-	std::cout << "default bot # " << i << " created" << std::endl;
-	++i;
-}
+// FragTrap::FragTrap() :
+// 		_hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100),
+// 		_level(1), _meleeAttackDamage(30), _rangedAttackDamage(20),
+// 		_armorDamageReduction(5)
+// {
+// 	static int i;
+// 	std::stringstream ss;
+// 	ss << "ROBOT #" << i;
+// 	_name = ss.str();
+// 	std::cout << "default bot # " << i << " created" << std::endl;
+// 	++i;
+// }
 
-FragTrap::FragTrap(const FragTrap & obj)
+FragTrap::FragTrap(const FragTrap & copy) : ClapTrap(copy)
+	// _hitPoints(copy._hitPoints),
+	// _maxHitPoints(copy._maxHitPoints), _energyPoints(copy._energyPoints),
+	// _maxEnergyPoints(copy._maxEnergyPoints), _level(copy._level),
+	// _name(copy._name), _meleeAttackDamage(copy._meleeAttackDamage),
+	// _rangedAttackDamage(copy._rangedAttackDamage),
+	// _armorDamageReduction(copy._armorDamageReduction)
 {
-	std::cout << "Copy Constructor Called" << std::endl;
-	*this = obj;
+	std::cout << "FragTrap( copy ) Copy Constructor Called" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Destructor Called" << std::endl;
+	std::cout << "FragTrap() Destructor Called" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap & rhs)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "FragTrap( = ) Assignation operator called" << std::endl;
 	if (this != &rhs)
 	{
 		this->_hitPoints = rhs._hitPoints;
@@ -50,92 +52,35 @@ FragTrap& FragTrap::operator=(const FragTrap & rhs)
 	return *this;
 }
 
-void FragTrap::rangedAttack(std::string const &target)
-{
 
-	std::cout << "FR4G-TP <" << this->_name << "> attacks <"
-			  << target << "> at range, causing <" << this->_rangedAttackDamage
-			  << "> points of damage !" << std::endl;
-}
-
-
-void FragTrap::meleeAttack(std::string const & target)
-{
-	std::cout << "FR4G-TP <" << this->_name << "> attacks <"
-			  << target << "> at melee, causing <" << this->_meleeAttackDamage
-			  << "> points of damage !" << std::endl;
-}
-
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	if (_hitPoints == 0)
-	{
-		std::cout << "BEEP!" << std::endl;
-		return;
-	}
-	if (amount <= _armorDamageReduction)
-	{
-		std::cout << "<" << _name << "> shield blocked damage <"
-				  << amount << "> " << std::endl;
-		return;
-	}
-	amount -= _armorDamageReduction;
-
-	if (amount > _hitPoints)
-		std::cout << FATALITY << "FATALITY" << RESET << " - ";
-
-	_hitPoints -= amount;
-	std::cout << "FR4G-TP <" << this->_name << "> take damage <"
-									<< amount << ">" << std::endl;
-	if (_hitPoints < 1)
-	{
-		std::cout << "<" << _name << "> is DEAD" << std::endl;
-		_hitPoints = 0;
-	}
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if (_hitPoints == _maxHitPoints)
-	{
-		std::cout << "repair doesn't need" << std::endl;
-		return;
-	}
-
-	_hitPoints += amount;
-
-	if (_hitPoints > _maxHitPoints)
-		_hitPoints = _maxHitPoints;
-	std::cout << "FR4G-TP <" << this->_name << "> repaired on <"
-			  << amount << ">" << std::endl;
-}
 
 
 void	FragTrap::kick(std::string const &target)
 {
-	std::cout << "by the kick" << std::endl;
+	std::cout <<"by the kick. "  << target << " is crying" << std::endl;
 }
 
 void	FragTrap::punch(std::string const &target)
 {
-	std::cout << "by the punch" << std::endl;
+	std::cout << "by the punch. " << target << " is crying" << std::endl;
 }
 void	FragTrap::foreheadAttack(std::string const &target)
 {
-	std::cout << "by the foreheadAttack" << std::endl;
+	std::cout << "by the foreheadAttack. " << target << " is crying" << std::endl;
 }
 
 void	FragTrap::brutality(std::string const &target)
 {
-	std::cout << "by the brutality" << std::endl;
+	std::cout << "by the brutality. " << target << " is crying" << std::endl;
 }
 void	FragTrap::annihilation(std::string const &target)
 {
-	std::cout << "by the annihilation" << std::endl;
+	std::cout << "by the annihilation. " << target << "is crying" << std::endl;
 }
 
 
-void	FragTrap::vaulthunter_dot_exe(std::string const & target) {
+void	FragTrap::vaulthunter_dot_exe(std::string const & target)
+{
 	if (_energyPoints < 25) {
 		std::cout << "FR4G-TP <" << _name << "> not enough energy for attack <"
 				  << target << ">" << std::endl;

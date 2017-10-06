@@ -1,11 +1,17 @@
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
-#include <string>
-#include <iostream>
+
+# include <string>
+# include <iostream>
+
+
+# define FATALITY "\e[31m"
+# define RESET "\e[39m"
+
 
 	class ClapTrap
 	{
-	// protected:
+	protected:
 		int			_hitPoints;
 		int			_maxHitPoints;
 		int			_energyPoints;
@@ -17,22 +23,20 @@
 		int			_armorDamageReduction;
 
 	public:
-		ClapTrap();
-		~ClapTrap();
-
-		ClapTrap(std::string const name);
+		ClapTrap(int energyPoints, int maxEnergyPoints,
+					std::string const & name, int meleeAttackDamage, 
+					int rangedAttackDamage, int armorDamageReduction);
 		ClapTrap(ClapTrap const & src);
-	ClapTrap(int hitPoints, int mHitPoints, int energyPoints, int mEnergyPoints, int level, std::string const & name, int meleeAttackDamage, int rangedAttackDamage, int armorDamageReduction);
+		~ClapTrap();
+		ClapTrap & operator=(ClapTrap const & rhs);
 
-	ClapTrap & operator=(ClapTrap const & rhs);
 
-	void	rangedAttack(std::string const & target) const;
-	void	meleeAttack(std::string const & target) const;
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
+		void	rangedAttack(std::string const & target) const;
+		void	meleeAttack(std::string const & target) const;
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 
 		
 	};
-
 
 #endif
