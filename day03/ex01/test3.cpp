@@ -1,31 +1,26 @@
+#include <cstdlib>
 #include <iostream>
 
-class A
-{
-public:
-	A(){};
-	~A(){};
+using std::cout;
+using std::endl;
 
-	void foo(){std::cout << "fooA" << std::endl;}
-	
+class A {
+public:
+	A() { cout << "A()" << endl; }
+	virtual ~A() { cout << "~A()" << endl; }
 };
 
-class B : public A
-{
+class B : public A {
 public:
-	B(){};
-	~B(){};
-	void foo(){std::cout << "fooB" << std::endl;}
+	B() { cout << "B()" << endl; }
+	~B() { cout << "~B()" << endl; }
 };
 
-
-int main(int argc, char const *argv[])
+int main()
 {
 	A *a = new B;
 
-	a->foo();
+	delete a;
 
-
-
-	return 0;
+	return EXIT_SUCCESS;
 }
