@@ -9,9 +9,9 @@
 	{
 	public:
 
-		Form();
+		Form(std::string const & name, int const & _gradeToSignIt, int const & _gradeToExecuteIt);
 		Form(Form const &cpy);
-		~Form();
+		virtual ~Form();
 
 		Form & operator = (Form const &rhs);
 
@@ -22,13 +22,16 @@
 
 	private:
 
-		std::string const _name;
-		int const         _gradeToSignIt;
-		int const         _gradeToExecuteIt;
-		boolean           _inWork;
+		std::string const  _name;
+		int const          _gradeToSignIt;
+		int const          _gradeToExecuteIt;
+		boolean            _inWork;
 
 	};
 
+
+
+	std::ostream & operator << (std::ostream & o, Form const & rhs);
 
 #endif
 
