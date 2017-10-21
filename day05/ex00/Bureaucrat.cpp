@@ -1,10 +1,59 @@
 #include "Bureaucrat.hpp"
 
+// Bureaucrat::GradeTooHighException
+Bureaucrat::GradeTooHighException::GradeTooHighException()
+{
 
+}
 
+Bureaucrat::GradeTooHighException::GradeTooHighException(Bureaucrat::GradeTooHighException const & cpy)
+{
+    *this = cpy;
+}
 
-const char *Bureaucrat::GradeTooHighException::what() const throw() {
+Bureaucrat::GradeTooHighException::~GradeTooHighException() throw()
+{
+
+}
+
+Bureaucrat::GradeTooHighException & Bureaucrat::GradeTooHighException::operator=(GradeTooHighException const & rhs)
+{
+    // if (this != &rhs)
+    // {
+    //    ;
+    // }
+    return *this = rhs;
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
     return "Grade too High";
+}
+
+
+// Bureaucrat::GradeTooLowException
+Bureaucrat::GradeTooLowException::GradeTooLowException()
+{
+
+}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException(Bureaucrat::GradeTooLowException const & cpy)
+{
+    *this = cpy;
+}
+
+Bureaucrat::GradeTooLowException::~GradeTooLowException() throw()
+{
+
+}
+
+Bureaucrat::GradeTooLowException & Bureaucrat::GradeTooLowException::operator=(GradeTooLowException const & rhs)
+{
+    // if (this != &rhs)
+    // {
+    //     ;
+    // }
+    return *this = rhs;
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {
@@ -12,11 +61,7 @@ const char *Bureaucrat::GradeTooLowException::what() const throw() {
 }
 
 
-
-
-
-
-
+// Bureaucrat
 Bureaucrat::Bureaucrat(const std::string & name, const int & grade) : _name(name)
 {
 	if (grade > 150)
@@ -53,31 +98,29 @@ Bureaucrat & Bureaucrat::operator = (const Bureaucrat &rhs)
 	return *this;
 }
 
+void        Bureaucrat::incrementGrade()
+{
+    if (_grade == 1)
+        throw Bureaucrat::GradeTooHighException();
+    _grade -= 1;
+}
+
+void        Bureaucrat::decrementGrade()
+{
+    if (_grade == 150)
+        throw Bureaucrat::GradeTooLowException();
+    _grade += 1;
+}
+
 std::string  Bureaucrat::getName() const
 {
-	return _name;
+    return _name;
 }
 
 int          Bureaucrat::getGrade() const
 {
-	return _grade;
+    return _grade;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

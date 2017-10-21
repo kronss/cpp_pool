@@ -8,14 +8,14 @@
 	class Bureaucrat
 	{
 	public:
+
 		class GradeTooHighException : public std::exception
 		{
 		public:
-			// GradeTooHighException(void);
-			// GradeTooHighException(GradeTooHighException const & src);
-			// virtual ~GradeTooHighException(void) throw();
-
-			// GradeTooHighException & operator=(GradeTooHighException const & rhs);
+			GradeTooHighException();
+			GradeTooHighException(GradeTooHighException const & src);
+			virtual ~GradeTooHighException() throw();
+			GradeTooHighException & operator=(GradeTooHighException const & rhs);
 
 			virtual const char * what() const throw();
 		};
@@ -23,40 +23,29 @@
 		class GradeTooLowException : public std::exception
 		{
 		public:
+			GradeTooLowException();
+			GradeTooLowException(GradeTooLowException const & cpy);
+			virtual ~GradeTooLowException() throw();
+			GradeTooLowException & operator = (GradeTooLowException const & rhs);
+
 			virtual const char * what() const throw();
 		};
 
-
-
-
-
-
 		Bureaucrat(const std::string & name, const int & grade);
-		~Bureaucrat();
+		virtual ~Bureaucrat();
 		Bureaucrat(const Bureaucrat & obj);
 		Bureaucrat & operator = (const Bureaucrat & rhs);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-		void         increment();
-		void         decrement();
+		void         incrementGrade();
+		void         decrementGrade();
 
 // GETER ******************
 		std::string  getName() const;
 		int          getGrade() const;
 
 	private:
+
 		const std::string _name;
 		int               _grade;
 	};
