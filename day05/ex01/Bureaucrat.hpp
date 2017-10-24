@@ -3,7 +3,9 @@
 
 # include <string>
 # include <iostream>
+# include "Form.hpp"
 
+class Form;
 
 	class Bureaucrat
 	{
@@ -36,11 +38,12 @@
 		Bureaucrat(const Bureaucrat & obj);
 		Bureaucrat & operator = (const Bureaucrat & rhs);
 
+		void         signForm(Form & form);
 
 		void         incrementGrade();
 		void         decrementGrade();
 
-// GETER ******************
+// GETTER ******************
 		std::string  getName() const;
 		int          getGrade() const;
 

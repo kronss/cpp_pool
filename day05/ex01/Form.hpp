@@ -5,11 +5,39 @@
 # include <iostream>
 
 
+#include "Bureaucrat.hpp"
+
+class Bureaucrat;
+
 	class Form
 	{
 	public:
 
-		Form(std::string const & name, int const & _gradeToSignIt, int const & _gradeToExecuteIt);
+		class GradeTooHighException : public std::exception
+		{
+		public:
+			GradeTooHighException();
+			GradeTooHighException(GradeTooHighException const & src);
+			virtual ~GradeTooHighException() throw();
+			GradeTooHighException & operator=(GradeTooHighException const & rhs);
+
+			virtual const char * what() const throw();
+		};
+
+		class GradeTooLowException : public std::exception
+		{
+		public:
+			GradeTooLowException();
+			GradeTooLowException(GradeTooLowException const & cpy);
+			virtual ~GradeTooLowException() throw();
+			GradeTooLowException & operator = (GradeTooLowException const & rhs);
+
+			virtual const char * what() const throw();
+		};
+
+
+
+		Form(std::string const & name, int const & gradeToSignIt, int const & gradeToExecuteIt);
 		Form(Form const &cpy);
 		virtual ~Form();
 
@@ -20,12 +48,25 @@
 
 
 
+		void         beSigned(Bureaucrat const & bureaucrat);
+
+// SETTER
+		void         setIsDone(bool status);
+
+
+// GETTER ******************
+		std::string  getName() const;
+		int          getGradeToSign() const;		
+		int          getGradeToExecute() const;		
+		bool         getIsDone() const;		
+
+
 	private:
 
 		std::string const  _name;
 		int const          _gradeToSignIt;
 		int const          _gradeToExecuteIt;
-		boolean            _inWork;
+		bool               _isDone;
 
 	};
 
@@ -34,20 +75,3 @@
 	std::ostream & operator << (std::ostream & o, Form const & rhs);
 
 #endif
-
-
-//TODO
-
-/*
-Form::GradeTooHighException and Form::GradeTooLowException.
-
-
-
-
-Same as before, make getters for all attributes, and an overload of the << operator to ostream that completely describes the state of the form.
-You will also add a beSigned function that takes a Bureaucrat, and makes the form signed if the bureaucrat’s grade is high enough. Always remember, grade 1 is better than grade 2. If the grade is too low, throw a Form::GradeTooLowException.
-Also add a signForm function to the Bureaucrat. If the signing is successful, it will print something like "<bureaucrat> signs <form", otherwise it will print something like "<bureaucrat> cannot sign <form> because <reason>".
-Add whatever’s needed to test this to your main.
-
-
-*/

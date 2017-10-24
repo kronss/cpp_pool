@@ -1,24 +1,46 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-int main(int argc, char const *argv[])
+int main(void)
 {
-	try
+	std::cout << "_____Form_____" << std::endl;
 	{
-		Bureaucrat obj("dick", 120);
-		std::cout << obj << std::endl;
+		Bureaucrat b1 = Bureaucrat("The Bureaucrat 1", 40);
+		Bureaucrat b2 = Bureaucrat("The Bureaucrat 2", 10);
 
-		Bureaucrat obj2 = obj;
-		std::cout << obj2 << std::endl;
+		Form f1 = Form("Form 1", 50, 70);
+		Form f2 = Form("Form 2", 20, 70);
+		Form f3 = Form("Form 3", 30, 70);
 
-		Bureaucrat obj0("dick", 150);	
 
-		Bureaucrat obj3 = obj0;
-		std::cout << obj3 << std::endl;
-		obj3.decrementGrade();
+		b1.signForm(f1);
+		std::cout << b1 << std::endl;
+		std::cout << f1 << std::endl;
+		std::cout << std::endl;
+
+		b1.signForm(f2);
+		std::cout << b1 << std::endl;
+		std::cout << f2 << std::endl;
+		std::cout << std::endl;
+
+		b2.signForm(f1);
+		std::cout << b2 << std::endl;
+		std::cout << f1 << std::endl;
+		std::cout << std::endl;
+
+		b2.signForm(f2);
+		std::cout << b2 << std::endl;
+		std::cout << f2 << std::endl;
+
+		b2.signForm(f3);
+		std::cout << b2 << std::endl;
+		std::cout << f3 << std::endl;
+
+		b1.signForm(f3);
+		std::cout << b1 << std::endl;
+		std::cout << f3 << std::endl;
+
+
 	}
-	catch (std::exception & e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return 0;
+	return (0);
 }
