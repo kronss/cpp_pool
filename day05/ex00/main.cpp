@@ -1,6 +1,6 @@
 #include "Bureaucrat.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
 	try
 	{

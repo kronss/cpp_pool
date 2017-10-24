@@ -18,11 +18,11 @@ Form::GradeTooHighException::~GradeTooHighException() throw()
 
 Form::GradeTooHighException & Form::GradeTooHighException::operator=(GradeTooHighException const & rhs)
 {
-    if (this != &rhs)
-    {
-       *this = rhs;
-    }
-    return *this;
+    // if (this != &rhs)
+    // {
+    //    ;
+    // }
+    return *this = rhs;
 }
 
 const char *Form::GradeTooHighException::what() const throw()
@@ -48,11 +48,11 @@ Form::GradeTooLowException::~GradeTooLowException() throw()
 
 Form::GradeTooLowException & Form::GradeTooLowException::operator=(GradeTooLowException const & rhs)
 {
-    if (this != &rhs)
-    {
-       *this = rhs;
-    }
-    return *this;
+    // if (this != &rhs)
+    // {
+    //     ;
+    // }
+    return *this = rhs;
 }
 
 const char *Form::GradeTooLowException::what() const throw() {
@@ -68,76 +68,76 @@ _gradeToSignIt(gradeToSignIt),
 _gradeToExecuteIt(gradeToExecuteIt),
 _isDone(false)
 {
-    std::cout << "Form created" << std::endl;
+	std::cout << "Form created" << std::endl;
 }
 
 Form::Form(Form const &cpy)
 : _name(cpy._name), _gradeToSignIt(cpy._gradeToSignIt), _gradeToExecuteIt(cpy._gradeToExecuteIt)
 {
-    std::cout << "copy Form created" << std::endl;
+	std::cout << "copy Form created" << std::endl;
 }
 
 Form::~Form()
 {
-    std::cout << "Form was burned in fire" << std::endl;
+	std::cout << "Form was burned in fire" << std::endl;
 }
 
 Form & Form::operator = (Form const & rhs)
 {
-    if (this == &rhs)
-    {
-        // _name;
-        // _gradeToSignIt;
-        // _gradeToExecuteIt;
-        _isDone = rhs._isDone;
-    }
-    return *this;
+	if (this == &rhs)
+	{
+		// _name;
+		// _gradeToSignIt;
+		// _gradeToExecuteIt;
+		_isDone = rhs._isDone;
+	}
+	return *this;
 }
 
 void         Form::beSigned(Bureaucrat const & bureaucrat)
 {
-    if (getIsDone())
-        return ;
+	if (getIsDone())
+		return ;
 
-    if (bureaucrat.getGrade() > _gradeToSignIt)
-        throw Form::GradeTooLowException();
+	if (bureaucrat.getGrade() > _gradeToSignIt)
+		throw Form::GradeTooLowException();
 
-    setIsDone(true);
+	setIsDone(true);
 }
 
 
 // SETTER ******************
 void         Form::setIsDone(bool status)
 {
-    _isDone = status;
+	_isDone = status;
 }
 
 
 // GETTER ******************
 std::string  Form::getName() const
 {
-    return _name;
+	return _name;
 }
 
 int          Form::getGradeToSign() const
 {
-    return _gradeToSignIt;
+	return _gradeToSignIt;
 }
 
 int          Form::getGradeToExecute() const
 {
-    return _gradeToExecuteIt;
+	return _gradeToExecuteIt;
 }
 
 bool         Form::getIsDone() const
 {
-    return _isDone;
+	return _isDone;
 }
 
 // OSTREAM ********************
 std::ostream & operator << (std::ostream & o, Form const & rhs)
 {
-    o << "Name: " << rhs.getName() << " Grade Sign: " << rhs.getGradeToSign()
-    << " Grade Execute: " << rhs.getGradeToExecute() << " Signed: " << std::boolalpha << rhs.getIsDone();
-    return o;
+	o << "Name: " << rhs.getName() << " Grade Sign: " << rhs.getGradeToSign()
+	<< " Grade Execute: " << rhs.getGradeToExecute() << " Signed: " << std::boolalpha << rhs.getIsDone();
+	return o;
 }
