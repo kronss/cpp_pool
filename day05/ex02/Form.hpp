@@ -43,22 +43,20 @@ class Bureaucrat;
 
 		Form & operator = (Form const &rhs);
 
-
-
-
-
-
 		void         beSigned(Bureaucrat const & bureaucrat);
 
+		virtual void execute(Bureaucrat const & executor) const = 0;
+
+
 // SETTER
-		void         setIsDone(bool status);
+		void         setIsSigned(bool status);
 
 
 // GETTER ******************
 		std::string  getName() const;
 		int          getGradeToSign() const;		
 		int          getGradeToExecute() const;		
-		bool         getIsDone() const;		
+		bool         getIsSigned() const;		
 
 
 	private:
@@ -66,7 +64,7 @@ class Bureaucrat;
 		std::string const  _name;
 		int const          _gradeToSignIt;
 		int const          _gradeToExecuteIt;
-		bool               _isDone;
+		bool               _isSigned;
 
 	};
 
