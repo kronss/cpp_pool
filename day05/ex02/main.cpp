@@ -8,7 +8,7 @@ int main(void)
 {
 	std::cout << "_____Form_____" << std::endl;
 	{
-		Bureaucrat b1 = Bureaucrat("The Bureaucrat 1", 40);
+		Bureaucrat b1 = Bureaucrat("The Bureaucrat 1", 144);
 		// Bureaucrat b2 = Bureaucrat("The Bureaucrat 2", 10);
 
 		ShrubberyCreationForm f1 = ShrubberyCreationForm("Form 1");
@@ -20,8 +20,16 @@ int main(void)
 
 		std::cout << std::setfill('-') << std::setw(55) << "" << std::endl;
 
-		b1.signForm(f1);
-		f1.execute(b1);
+
+		try 
+		{
+			b1.signForm(f1);
+			f1.execute(b1);
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
 
 
 

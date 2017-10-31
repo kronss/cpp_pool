@@ -1,7 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const & name)
-: Form(name, 145, 137)
+: Form(name, SIGN, EXEC)
 {
     std::cout << "ShrubberyCreationForm" << std::endl;
 }
@@ -50,11 +50,12 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
             std::cerr << nameFile << "could not be opened for writing!" << std::endl;
             exit(1);
         }
+
         file << "@---@---@" << std::endl;
         file << "    |    " << std::endl;
         file << "    |    " << std::endl;
         file << "    |    " << std::endl;
     }
     else
-        throw exeption;
+        throw Form::GradeTooLowException();
 }

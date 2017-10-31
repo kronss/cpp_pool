@@ -6,6 +6,12 @@
 
 # include "Form.hpp"    
 
+enum gradeToShrubberyCreationForm
+{
+	SIGN = 145,
+	EXEC = 137
+};
+
     class ShrubberyCreationForm : public Form
     {
     public:
@@ -15,16 +21,7 @@
 
         ShrubberyCreationForm & operator = (ShrubberyCreationForm const & rhs);
 
-
-
-
-
         void execute(Bureaucrat const & executor) const;
-
-
-    };
-    
-
-
+	};
 
 #endif
