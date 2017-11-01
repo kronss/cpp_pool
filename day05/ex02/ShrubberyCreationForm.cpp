@@ -1,7 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const & name)
-: Form(name, SIGN, EXEC)
+: Form(name, SIGN_GRADE, EXEC_GRADE)
 {
     std::cout << "ShrubberyCreationForm" << std::endl;
 }
@@ -30,8 +30,6 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (ShrubberyCreationForm
     }
     return *this;
 }
-
-
 
 void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {

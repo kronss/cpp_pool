@@ -1,16 +1,11 @@
 #ifndef SHRUBBERY_CREATION_FORM_HPP
 # define SHRUBBERY_CREATION_FORM_HPP
-        
+
 # include <iostream>
 # include <fstream>
 
-# include "Form.hpp"    
+# include "Form.hpp"
 
-enum gradeToShrubberyCreationForm
-{
-	SIGN = 145,
-	EXEC = 137
-};
 
     class ShrubberyCreationForm : public Form
     {
@@ -22,6 +17,13 @@ enum gradeToShrubberyCreationForm
         ShrubberyCreationForm & operator = (ShrubberyCreationForm const & rhs);
 
         void execute(Bureaucrat const & executor) const;
-	};
+    private:
+        enum gradeToShrubberyCreationForm
+        {
+            SIGN_GRADE = 145,
+            EXEC_GRADE = 137
+        };
+
+    };
 
 #endif

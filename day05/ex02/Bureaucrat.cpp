@@ -18,11 +18,11 @@ Bureaucrat::GradeTooHighException::~GradeTooHighException() throw()
 
 Bureaucrat::GradeTooHighException & Bureaucrat::GradeTooHighException::operator=(GradeTooHighException const & rhs)
 {
-    // if (this != &rhs)
-    // {
-    //    ;
-    // }
-    return *this = rhs;
+    if (this != &rhs)
+    {
+       *this = rhs;
+    }
+    return *this;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
@@ -49,11 +49,11 @@ Bureaucrat::GradeTooLowException::~GradeTooLowException() throw()
 
 Bureaucrat::GradeTooLowException & Bureaucrat::GradeTooLowException::operator=(GradeTooLowException const & rhs)
 {
-    // if (this != &rhs)
-    // {
-    //     ;
-    // }
-    return *this = rhs;
+    if (this != &rhs)
+    {
+       *this = rhs;
+    }
+    return *this;
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw() {

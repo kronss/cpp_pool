@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 
 #include <iomanip>
@@ -8,11 +9,11 @@ int main(void)
 {
 	std::cout << "_____Form_____" << std::endl;
 	{
-		Bureaucrat b1 = Bureaucrat("The Bureaucrat 1", 144);
-		// Bureaucrat b2 = Bureaucrat("The Bureaucrat 2", 10);
+		Bureaucrat b1 = Bureaucrat("The Bureaucrat 1", 50);
+		Bureaucrat b2 = Bureaucrat("The Bureaucrat 2", 10);
 
 		ShrubberyCreationForm f1 = ShrubberyCreationForm("Form 1");
-		// ShrubberyCreationForm f2 = ShrubberyCreationForm("Form 2");
+		RobotomyRequestForm f2 = RobotomyRequestForm("Form 2");
 		// ShrubberyCreationForm f3 = ShrubberyCreationForm("Form 3");
 
 
@@ -30,6 +31,19 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+
+
+
+		try 
+		{
+			b2.signForm(f2);
+			f2.execute(b2);
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+
 
 
 

@@ -102,11 +102,11 @@ Form::GradeTooHighException::~GradeTooHighException() throw()
 
 Form::GradeTooHighException & Form::GradeTooHighException::operator=(GradeTooHighException const & rhs)
 {
-    // if (this != &rhs)
-    // {
-    //    ;
-    // }
-    return *this = rhs;
+    if (this != &rhs)
+    {
+       *this = rhs;
+    }
+    return *this;
 }
 
 const char *Form::GradeTooHighException::what() const throw()
@@ -132,11 +132,11 @@ Form::GradeTooLowException::~GradeTooLowException() throw()
 
 Form::GradeTooLowException & Form::GradeTooLowException::operator=(GradeTooLowException const & rhs)
 {
-    // if (this != &rhs)
-    // {
-    //     ;
-    // }
-    return *this = rhs;
+    if (this != &rhs)
+    {
+       *this = rhs;
+    }
+    return *this;
 }
 
 const char *Form::GradeTooLowException::what() const throw() {

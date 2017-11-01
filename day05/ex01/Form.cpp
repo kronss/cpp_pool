@@ -84,7 +84,7 @@ Form::~Form()
 
 Form & Form::operator = (Form const & rhs)
 {
-    if (this == &rhs)
+    if (this != &rhs)
     {
         // _name;
         // _gradeToSignIt;

@@ -83,7 +83,9 @@ Bureaucrat::~Bureaucrat()
 	std::cout << "~Bureaucrat died" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name), _grade(copy._grade)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy)
+: _name(copy._name),
+_grade(copy._grade)
 {
 	std::cout << "Bureaucrat copy" << std::endl;
 }
