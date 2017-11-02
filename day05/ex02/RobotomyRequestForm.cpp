@@ -29,7 +29,7 @@ RobotomyRequestForm & RobotomyRequestForm::operator = (RobotomyRequestForm const
 void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     bool isSigned = this->getIsSigned();
-    bool CanIExecute = executor.getGrade() < getGradeToExecute();
+    bool CanIExecute = executor.executeForm(*this);
 
     if (isSigned && CanIExecute)
     {

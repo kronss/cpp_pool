@@ -43,6 +43,8 @@ class Form;
 		void         incrementGrade();
 		void         decrementGrade();
 
+		bool         executeForm(Form const & form) const;
+
 // GETTER ******************
 		std::string  getName() const;
 		int          getGrade() const;

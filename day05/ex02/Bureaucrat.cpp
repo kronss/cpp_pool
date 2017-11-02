@@ -128,6 +128,17 @@ void        Bureaucrat::decrementGrade()
     _grade += 1;
 }
 
+bool        Bureaucrat::executeForm(Form const & form) const
+{
+    bool canIExecute = _grade < form.getGradeToExecute();
+
+    if (canIExecute)
+        std::cout << "<" << _name << "> executes <" << form << ">" << std::endl;
+    else
+        std::cout << "<" << _name << "> unfortunatly cannot executes <" << form << ">" << std::endl;
+    return canIExecute;
+}
+
 
 // GETTER *****************************
 std::string  Bureaucrat::getName() const

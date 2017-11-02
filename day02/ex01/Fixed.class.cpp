@@ -61,6 +61,7 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
+	std::cout <<"----" << raw << std::endl;
     _fpv = raw;
 }
 

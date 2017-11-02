@@ -22,11 +22,6 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (ShrubberyCreationForm
     if (this == &rhs)
     {
         Form::operator = (rhs);
-
-        // _name;
-        // _gradeToSignIt;
-        // _gradeToExecuteIt;
-        // _isDone = rhs._isDone;
     }
     return *this;
 }
@@ -34,7 +29,7 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (ShrubberyCreationForm
 void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     bool isSigned = this->getIsSigned();
-    bool CanIExecute = executor.getGrade() < getGradeToExecute();
+    bool CanIExecute = executor.executeForm(*this);
 
 
     if (isSigned && CanIExecute)
